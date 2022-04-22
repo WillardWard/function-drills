@@ -72,7 +72,21 @@ greeting('Tripp');
     Brownie points if you use a ternary statement (only spend significant time on this if you have wiggle room)
 */
 
-//CODE HERE
+// const compareNums = (num1, num2) => {
+//   if (num1 > num2){
+//     return num1;
+//   }else if (num2 > num1){
+//     return num2;
+//   }else{
+//     return num1;
+//   }
+// }
+
+const compareNums = (num1, num2) => num1 >= num2 ? num1 : num2;
+
+console.log(compareNums(32, 45));
+console.log(compareNums(33, 33));
+console.log(compareNums(87, 3));
 
 
 ////////////////// PROBLEM 6 ////////////////////
