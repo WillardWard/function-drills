@@ -176,7 +176,22 @@ console.log(exclaimFour('declaration'));
   Create a variable called 'nameGreeting' and set it equal to your function invoked (called) passing in an argument.
 */
 
-//CODE HERE
+function nameCheck (name) {
+  if (name === 'Steven'){
+    return 'What is up Steven?';
+  }else if (name === 'Bryan'){
+    return 'Hey Bryan!';
+  }else {
+    return `Cool name, ${name}`;
+  }
+}
+
+const nameGreeting = nameCheck('Steven');
+
+console.log(nameGreeting);
+console.log(nameCheck('Bryan'));
+console.log(nameCheck('Tripp'));
+console.log(nameCheck(45));
 
 
 ////////////////// PROBLEM 11 ////////////////////
@@ -189,8 +204,25 @@ console.log(exclaimFour('declaration'));
   Create a variable called 'colorRating' and set it equal to faveColorFinder invoked (called), passing in an argument.
 */
 
-//CODE HERE
+function faveColorFinder (color) {
+  if (color === 'red') {
+    return 'red is a great color';
+  }else if (color === 'green') {
+    return 'green is a solid favorite color';
+  }else if (color === 'black') {
+    return 'so trendy';
+  }else {
+    return 'you need to evaluate your favorite color choice';
+  }
+}
 
+const colorRating = faveColorFinder('red');
+
+console.log(colorRating);
+console.log(faveColorFinder('green'));
+console.log(faveColorFinder('black'));
+console.log(faveColorFinder('yellow'));
+console.log(faveColorFinder(411));
 
 ////////////////// PROBLEM 12 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
