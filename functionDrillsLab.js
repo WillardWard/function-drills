@@ -11,7 +11,7 @@
   Call the function.
 */
 
-function helloWorld(){
+function helloWorld (){
   console.log('Hello, World!');
 }
 
@@ -23,7 +23,11 @@ helloWorld();
     Write an arrow function called 'jsNinja' that returns the string: 'I am a JavaScript ninja!'
 */
 
-//CODE HERE
+function jsNinja (){
+  return 'I am a JavaScript ninja!'
+}
+
+console.log(jsNinja());
 
 
 ////////////////// PROBLEM 3 ////////////////////
@@ -33,7 +37,11 @@ helloWorld();
   Call the function, passing in an argument.
 */
 
-//CODE HERE
+function printName (name){
+  console.log(name);
+}
+
+printName('Tripp');
 
 
 ////////////////// PROBLEM 4 ////////////////////
