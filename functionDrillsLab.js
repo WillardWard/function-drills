@@ -84,9 +84,9 @@ greeting('Tripp');
 
 const compareNums = (num1, num2) => num1 >= num2 ? num1 : num2;
 
-console.log(compareNums(32, 45));
-console.log(compareNums(33, 33));
-console.log(compareNums(87, 3));
+// console.log(compareNums(32, 45));
+// console.log(compareNums(33, 33));
+// console.log(compareNums(87, 3));
 
 
 ////////////////// PROBLEM 6 ////////////////////
@@ -97,7 +97,15 @@ console.log(compareNums(87, 3));
   Create a variable outside the function called 'sum' and set it equal to add invoked (called), passing in 2 arguments.
 */
 
-//CODE HERE
+function add (num1, num2) {
+  const exp1 = parseInt(num1);
+  const exp2 = parseInt(num2);
+  return exp1 + exp2;
+}
+
+const sum = add('2 inches', 3);
+
+// console.log(sum);
 
 
 ////////////////// PROBLEM 7 ////////////////////
