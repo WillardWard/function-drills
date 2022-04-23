@@ -11,6 +11,8 @@
   Call the function.
 */
 
+//CODE HERE
+
 function helloWorld (){
   console.log('Hello, World!');
 }
@@ -22,6 +24,8 @@ helloWorld();
 /*
     Write an arrow function called 'jsNinja' that returns the string: 'I am a JavaScript ninja!'
 */
+
+//CODE HERE
 
 function jsNinja (){
   return 'I am a JavaScript ninja!'
@@ -36,6 +40,8 @@ console.log(jsNinja());
   Ex. If 'Cameron' were passed in as the argument, Cameron would be console logged.
   Call the function, passing in an argument.
 */
+
+//CODE HERE
 
 function printName (name){
   console.log(name);
@@ -55,8 +61,10 @@ printName('Tripp');
   Make sure to call your function and pass in an argument.
 */
 
+//CODE HERE
+
 function greeting (name) {
-  console.log ('Hello, ' + name);
+  console.log (`Hello, ${String(name)}`);
 }
 
 greeting('Tripp');
@@ -72,6 +80,8 @@ greeting('Tripp');
     Brownie points if you use a ternary statement (only spend significant time on this if you have wiggle room)
 */
 
+//CODE HERE
+
 // const compareNums = (num1, num2) => {
 //   if (num1 > num2){
 //     return num1;
@@ -82,7 +92,7 @@ greeting('Tripp');
 //   }
 // }
 
-const compareNums = (num1, num2) => num1 >= num2 ? num1 : num2;
+const compareNums = (num1, num2) => num1 > num2 ? num1 : num2;
 
 // console.log(compareNums(32, 45));
 // console.log(compareNums(33, 33));
@@ -96,6 +106,8 @@ const compareNums = (num1, num2) => num1 >= num2 ? num1 : num2;
   The add function should RETURN the two parameters added together.
   Create a variable outside the function called 'sum' and set it equal to add invoked (called), passing in 2 arguments.
 */
+
+//CODE HERE
 
 function add (num1, num2) {
   const exp1 = parseInt(num1);
@@ -115,6 +127,8 @@ const sum = add('2 inches', 3);
   Uncomment the answer underneath.
 */
 
+//CODE HERE
+
 const exclaim = function(str) {
   return str.toUpperCase() + '!!!'
 }
@@ -131,6 +145,8 @@ console.log(exclaim('expression'));
   Which syntax was used to create the function below?
   Uncomment the answer underneath.
 */
+
+//CODE HERE
 
 const exclaimTwo = str => {
   return str.toUpperCase() + '!!!'
@@ -158,6 +174,8 @@ console.log(exclaimThree('arrow, again'));
   Uncomment the answer underneath.
 */
 
+//CODE HERE
+
 function exclaimFour(str) {
   return str.toUpperCase() + '!!!'
 }
@@ -175,6 +193,8 @@ console.log(exclaimFour('declaration'));
   If the name parameter is anything else, return 'Cool name, NAMEPARAM' (with NAMEPARAM being the value of the name parameter being passed in).
   Create a variable called 'nameGreeting' and set it equal to your function invoked (called) passing in an argument.
 */
+
+//CODE HERE
 
 function nameCheck (name) {
   if (name === 'Steven'){
@@ -203,6 +223,8 @@ console.log(nameCheck(45));
   Otherwise, you should return the string 'you need to evaluate your favorite color choice'
   Create a variable called 'colorRating' and set it equal to faveColorFinder invoked (called), passing in an argument.
 */
+
+//CODE HERE
 
 function faveColorFinder (color) {
   if (color === 'red') {
@@ -234,6 +256,13 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 
 //CODE HERE
 
+function printAllNames (array){
+  for (let i = 0; i < array.length; i++){
+    console.log(array[i]);
+  }
+}
+
+printAllNames(namesArr);
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
@@ -244,6 +273,21 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
+
+function thatsOdd (number) {
+  if (number % 2 === 0){
+    return `That's not odd!`;
+  }else {
+    return `That is odd indeed!`;
+  };
+};
+
+let oddChecker = thatsOdd(3);
+console.log(oddChecker);
+oddChecker = thatsOdd(4);
+console.log(oddChecker);
+oddChecker = thatsOdd(55);
+console.log(oddChecker);
 
 
 ////////////////// PROBLEM 14 ////////////////////
@@ -256,7 +300,9 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
     we would expect the function to return 'Sharknado is the best movie ever!'
 */
 
-//CODE HERE
+const bestMovie = (title) => `${title} is the best movie ever!`;
+
+console.log(bestMovie(`Dune`));
 
 
 ////////////////// PROBLEM 15 ////////////////////
@@ -272,6 +318,20 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 
 //CODE HERE
 
+function bigOrSmall (arr) {
+  const answers = [];
+  for (let i = 0; i < arr.length; i++){
+    if (arr[i] > 100){
+      answers.push(`big`);
+    }else {
+      answers.push('small');
+    };
+  };
+  return answers;
+};
+
+const arrayEvaluator = bigOrSmall(bigOrSmallArray);
+console.log(arrayEvaluator);
 
 ////////////////// PROBLEM 16 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
@@ -282,6 +342,17 @@ let loser = 'Glimmer'
 */
 
 //CODE HERE
+
+function theEliminator (contestants, loser) {
+  for (let i = 0; i < contestants.length; i++){
+    if (contestants[i] === loser){
+      contestants.splice(i,1);
+    }
+  }
+  return contestants;
+}
+
+console.log(theEliminator(contestants, loser));
 
 
 ////////////////// PROBLEM 17 ////////////////////
