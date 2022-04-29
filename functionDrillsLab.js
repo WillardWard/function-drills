@@ -382,6 +382,20 @@ makeUpperCase(sampleString);
   return 'must provide a valid email address'
 */
 
+function emailCheck (email) {
+  String(email.trim());
+  
+  if (email.includes('@')){
+    return 'email verified';
+  }else {
+    return 'must provide a valid email address';
+  }
+}
+
+console.log(emailCheck('willard@gmail.com'));
+console.log(emailCheck('willard gmail.com'));
+
+
 ////////////////// PROBLEM 19 ////////////////////
 /*
   Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
@@ -389,6 +403,15 @@ makeUpperCase(sampleString);
 */
 
 //CODE HERE
+
+function chocFrogs (gold) {
+  return parseInt(gold / 3);
+}
+
+console.log(chocFrogs(13));
+console.log(chocFrogs(20));
+console.log(chocFrogs(5));
+console.log(chocFrogs(6.6));
 
 
 ////////////////// PROBLEM 20 ////////////////////
@@ -398,6 +421,8 @@ makeUpperCase(sampleString);
 
 //CODE HERE
 
+console.log(`But I already made the function work! 20 gold buys ${chocFrogs(20)} chocolate frogs!`);
+
 
 ////////////////// PROBLEM 21 ////////////////////
 let sampleArray = [0,1,2,3,4,7,5,6,8,9]
@@ -406,6 +431,26 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 */
 
 //CODE HERE
+
+function ascendCheck (numArr) {
+  let check = false;
+  for (let i = 0; i < numArr.length - 1; i++){
+    if (numArr[i] <= numArr[i+1]){
+      // console.log(`This is the check1: ${numArr[i]} vs ${numArr[i+1]}`)
+       check = true;
+    }else{
+      // console.log(`This is the check2: ${numArr[i]} vs ${numArr[i+1]}`)
+      check = false;
+      return check;
+    }
+    // console.log(`This is the check final: ${numArr[i]} vs ${numArr[i+1]}`)
+  }
+  return check;
+}
+
+const arrayIsAscending = ascendCheck(sampleArray);
+
+console.log(`Is ${sampleArray} in ascending order? The Oracle says, "${arrayIsAscending}."`);
 
 
 ////////////////// PROBLEM 22 ////////////////////
@@ -430,13 +475,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = ["cute"]
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = ["squeaky", "nautical"]
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = ["nautical"]
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = ["fluffy"]
